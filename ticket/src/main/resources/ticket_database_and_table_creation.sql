@@ -16,10 +16,10 @@ CREATE TABLE `ticket` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 INSERT INTO `ticket` VALUES 
-(1,'headlight', 10, 7, 50),
-(2,'taillight', 8, 6, 30),
-(3,'windshield', 20, 1, 20),
-(4,'bulb', 4, 1, 15),
-(5,'air filter', 25, 25, 40)
+(1,'Spider Man', '7/2/2021', '20:00', 15),
+(2,'Godzilla vs. Kong', '7/4/2021', '21:00', 15),
+(3,'The Fate of the Furious', '7/5/2021', '22:00', 15),
+(4,'Spiral', '7/6/2021', '19:00', 15),
+(5,'The House Next Door', '7/7/2021', '18:00', 15),
 
 
