@@ -45,27 +45,27 @@ public class Ticket {
         this.id = id;
     }
 
-    public String getTicketName() {
+    public String getMovieTitle() {
         return movieTitle;
     }
 
-    public void getTicketName(String movieTitle) {
+    public void getMovieTitle(String movieTitle) {
         this.movieTitle = movieTitle;
     }
 
-    public int getLength() {
+    public int getDate() {
         return date;
     }
 
-    public void setLength(int date) {
+    public void setDate(int date) {
         this.date = date;
     }
 
-    public int getWidth() {
+    public int getTime() {
         return time;
     }
 
-    public void setWidth(int time) {
+    public void setTime(int time) {
         this.time = time;
     }
 
