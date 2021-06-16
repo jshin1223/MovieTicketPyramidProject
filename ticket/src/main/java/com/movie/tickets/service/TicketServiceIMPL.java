@@ -1,7 +1,7 @@
 package com.movie.tickets.service;
 
-import com.assignment.parts.dao.PartsDAO;
-import com.assignment.parts.entity.Parts;
+import com.movie.tickets.dao.TicketDAO;
+import com.movie.tickets.entity.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,33 +9,33 @@ import java.util.List;
 
 
 @Service
-public class TicketServiceIMPL implements PartsService {
+public class TicketServiceIMPL implements TicketService {
 
-    private final PartsDAO partsDAO;
+    private final TicketDAO ticketDAO;
 
     @Autowired
-    public TicketServiceIMPL(PartsDAO partsDAO) {
-        this.partsDAO = partsDAO;
+    public TicketServiceIMPL(TicketDAO ticketDAO) {
+        this.ticketDAO = ticketDAO;
     }
 
     @Override
-    public List<Parts> findAll() {
-        return partsDAO.findAll();
+    public List<Ticket> findAll() {
+        return ticketDAO.findAll();
     }
 
     @Override
-    public Parts findById(int partsID) {
-        return partsDAO.findById(partsID);
+    public Ticket findById(int ticketID) {
+        return ticketDAO.findById(ticketID);
     }
 
     @Override
-    public void saveOrUpdate(Parts theParts) {
-        partsDAO.saveOrUpdate(theParts);
+    public void saveOrUpdate(Ticket theTicket) {
+        ticketDAO.saveOrUpdate(theTicket);
     }
 
     @Override
-    public void deleteById(int partsID) {
-        partsDAO.deleteById(partsID);
+    public void deleteById(int ticketID) {
+        ticketDAO.deleteById(ticketID);
     }
 }
 

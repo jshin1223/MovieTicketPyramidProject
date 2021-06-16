@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 //Employee Entity
 @Entity //This will let Java know that this is an entity that we are going to map to a database table.
-@Table(name = "parts") //This is for the actual name of the database table we are mapping to the class.
+@Table(name = "ticket") //This is for the actual name of the database table we are mapping to the class.
 public class Ticket {
 
     //Define fields
@@ -13,8 +13,8 @@ public class Ticket {
     @Column(name = "id") //This is mapping the primary key to the id column in the table.
     private int id;
 
-    @Column(name = "parts_name") //This will map the jobTitle field to the column named job_title in the table.
-    private String partsName;
+    @Column(name = "ticket_name") //This will map the jobTitle field to the column named job_title in the table.
+    private String ticketName;
 
     @Column(name = "length") //This will map the firstName field to the column named first_name in the table.
     private int length;
@@ -45,12 +45,12 @@ public class Ticket {
         this.id = id;
     }
 
-    public String getPartsName() {
-        return partsName;
+    public String getTicketName() {
+        return ticketName;
     }
 
-    public void getPartsName(String partsName) {
-        this.partsName = partsName;
+    public void getTicketName(String ticketName) {
+        this.ticketName = ticketName;
     }
 
     public int getLength() {
@@ -80,9 +80,9 @@ public class Ticket {
     //ToString Method
     @Override
     public String toString() {
-        return "Parts{" +
+        return "Ticket{" +
                 "id=" + id +
-                ", partsName='" + partsName + '\'' +
+                ", ticketName='" + ticketName + '\'' +
                 ", length='" + length + '\'' +
                 ", width='" + width + '\'' +
                 ", price='" + price + '\'' +

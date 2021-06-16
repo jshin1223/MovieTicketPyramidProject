@@ -1,6 +1,6 @@
-package com.movie.tickets.entity;
+package com.movie.tickets.dao;
 
-import com.assignment.parts.entity.Parts;
+import com.movie.tickets.entity.Ticket;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.List;
 //IMPORTANT If your code is not working your imports might be incorrect
 
 @Repository
-public class TicketIMPL implements PartsDAO {
+public class TicketIMPL implements TicketDAO {
 
     //Define field for entity manager
     /*The EntityManager API is used to create and remove persistent entity instances,
@@ -28,31 +28,31 @@ public class TicketIMPL implements PartsDAO {
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
-    public List<Parts> findAll() {
+    public List<Ticket> findAll() {
         Session currentSession = entityManager.unwrap(Session.class);
-        Query<Parts> myQuery = currentSession.createQuery("from Parts");
+        Query<Ticket> myQuery = currentSession.createQuery("from Ticket");
         return myQuery.getResultList();
     }
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
-    public Parts findById(int theId) {
+    public Ticket findById(int theId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.get(Parts.class, theId);
+        return currentSession.get(Ticket.class, theId);
     }
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
-    public void saveOrUpdate(Parts theParts) {
+    public void saveOrUpdate(Ticket theTicket) {
         Session currentSession = entityManager.unwrap(Session.class);
-        currentSession.saveOrUpdate(theParts);
+        currentSession.saveOrUpdate(theTicket);
     }
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
     public void deleteById(int theId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        Parts myParts = currentSession.get(Parts.class, theId);
-        currentSession.delete(myParts);
+        Ticket myTicket = currentSession.get(Ticket.class, theId);
+        currentSession.delete(myTicket);
     }
 }

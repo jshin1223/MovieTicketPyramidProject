@@ -1,13 +1,13 @@
-package com.movie.tickets.entity;
+package com.movie.tickets.dao;
 
 
-import com.assignment.parts.entity.Parts;
+import com.movie.tickets.entity.Ticket;
 
 import java.util.List;
 
 public interface TicketDAO {
-    List<Parts> findAll();
-    Parts findById(int theId);
-    void saveOrUpdate(Parts theParts);
+    List<Ticket> findAll();
+    Ticket findById(int theId);
+    void saveOrUpdate(Ticket theTicket);
     void deleteById(int theId);
 }
