@@ -1,21 +1,21 @@
-CREATE DATABASE  IF NOT EXISTS `ticket_registry`;
-USE `ticket_registry`;
+CREATE DATABASE  IF NOT EXISTS `parts_registry`;
+USE `parts_registry`;
 --
--- Table structure for table `ticket`
+-- Table structure for table `parts`
 --
-DROP TABLE IF EXISTS `ticket`;
+DROP TABLE IF EXISTS `parts`;
 
 
-CREATE TABLE `ticket` (
+CREATE TABLE `parts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `ticket_name` varchar(45) DEFAULT NULL, 
+  `parts_name` varchar(45) DEFAULT NULL, 
   `length` int(11) DEFAULT NULL,
   `width` int(11) DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `ticket` VALUES 
+INSERT INTO `parts` VALUES 
 (1,'headlight', 10, 7, 50),
 (2,'taillight', 8, 6, 30),
 (3,'windshield', 20, 1, 20),

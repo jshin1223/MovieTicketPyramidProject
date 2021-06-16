@@ -1,6 +1,6 @@
-CREATE USER 'ticketRegistry'@'localhost' IDENTIFIED BY 'ticketRegistry';
+CREATE USER 'partsRegistry'@'localhost' IDENTIFIED BY 'partsRegistry';
 
-GRANT ALL PRIVILEGES ON * . * TO 'ticketRegistry'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'partsRegistry'@'localhost';
 #
 # Starting with MySQL 8.0.4, the MySQL team changed the 
 # default authentication plugin for MySQL server 
@@ -11,4 +11,4 @@ GRANT ALL PRIVILEGES ON * . * TO 'ticketRegistry'@'localhost';
 # See the MySQL Reference Manual for details: 
 # https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html
 #
-ALTER USER 'ticketRegistry'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+ALTER USER 'partsRegistry'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';

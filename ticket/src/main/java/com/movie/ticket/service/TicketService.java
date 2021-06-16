@@ -1,4 +1,4 @@
-package com.movie.tickets.service;
+package com.movie.ticket.service;
 
 import com.movie.tickets.entity.Ticket;
 

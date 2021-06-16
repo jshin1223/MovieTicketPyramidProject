@@ -1,7 +1,7 @@
-package com.movie.tickets.controller;
+package com.movie.ticket.controller;
 
-import com.movie.tickets.entity.Ticket;
-import com.movie.tickets.service.TicketService;
+import com.movie.ticket.entity.Ticket;
+import com.movie.ticket.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ public class TicketController {
     //dependencies for the ticketService.
 
     @Autowired
-    public Ticket(@Qualifier("ticketServiceIMPL")TicketService ticketService) {
+    public TicketController(@Qualifier("ticketServiceIMPL")TicketService ticketService) {
         this.ticketService = ticketService;
     }
 

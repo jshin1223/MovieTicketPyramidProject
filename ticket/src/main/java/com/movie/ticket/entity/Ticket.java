@@ -1,4 +1,4 @@
-package com.movie.tickets.entity;
+package com.movie.ticket.entity;
 
 import javax.persistence.*;
 

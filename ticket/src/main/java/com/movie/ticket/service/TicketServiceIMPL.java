@@ -1,7 +1,7 @@
-package com.movie.tickets.service;
+package com.movie.ticket.service;
 
-import com.movie.tickets.dao.TicketDAO;
-import com.movie.tickets.entity.Ticket;
+import com.movie.ticket.dao.TicketDAO;
+import com.movie.ticket.entity.Ticket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

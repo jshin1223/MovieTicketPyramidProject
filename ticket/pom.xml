@@ -8,11 +8,11 @@
 		<version>2.5.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.movie.tickets</groupId>
+	<groupId>com.movie.ticket</groupId>
 	<artifactId>ticket</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ticket</name>
-	<description>Movie Ticket Spring Project</description>
+	<description>Movie Ticket Project</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

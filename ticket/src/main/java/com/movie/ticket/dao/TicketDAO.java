@@ -1,7 +1,7 @@
-package com.movie.tickets.dao;
+package com.movie.ticket.dao;
 
 
-import com.movie.tickets.entity.Ticket;
+import com.movie.ticket.entity.Ticket;
 
 import java.util.List;
 
