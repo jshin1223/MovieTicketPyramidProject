@@ -1,6 +1,6 @@
 package com.movie.ticket.service;
 
-import com.movie.tickets.entity.Ticket;
+import com.movie.ticket.entity.Ticket;
 
 import java.util.List;
 

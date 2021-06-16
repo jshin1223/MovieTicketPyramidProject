@@ -13,14 +13,14 @@ public class Ticket {
     @Column(name = "id") //This is mapping the primary key to the id column in the table.
     private int id;
 
-    @Column(name = "ticket_name") //This will map the jobTitle field to the column named job_title in the table.
-    private String ticketName;
+    @Column(name = "movie_title") //This will map the jobTitle field to the column named job_title in the table.
+    private String movieTitle;
 
-    @Column(name = "length") //This will map the firstName field to the column named first_name in the table.
-    private int length;
+    @Column(name = "date") //This will map the firstName field to the column named first_name in the table.
+    private int date;
 
-    @Column(name = "width") //This will map the lastName field to the column named last_name in the table.
-    private int width;
+    @Column(name = "time") //This will map the lastName field to the column named last_name in the table.
+    private int time;
 
     @Column(name = "price") //This will map the email field to the column named email in the table.
     private int price;
@@ -30,9 +30,9 @@ public class Ticket {
     }
 
     //para constructor
-    public Ticket(int length, int width, int price) {
-        this.length = length;
-        this.width = width;
+    public Ticket(int date, int time, int price) {
+        this.date = date;
+        this.time = time;
         this.price = price;
     }
 
@@ -46,27 +46,27 @@ public class Ticket {
     }
 
     public String getTicketName() {
-        return ticketName;
+        return movieTitle;
     }
 
-    public void getTicketName(String ticketName) {
-        this.ticketName = ticketName;
+    public void getTicketName(String movieTitle) {
+        this.movieTitle = movieTitle;
     }
 
     public int getLength() {
-        return length;
+        return date;
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public void setLength(int date) {
+        this.date = date;
     }
 
     public int getWidth() {
-        return width;
+        return time;
     }
 
-    public void setWidth(int width) {
-        this.width = width;
+    public void setWidth(int time) {
+        this.time = time;
     }
 
     public int getPrice() {
@@ -82,9 +82,9 @@ public class Ticket {
     public String toString() {
         return "Ticket{" +
                 "id=" + id +
-                ", ticketName='" + ticketName + '\'' +
-                ", length='" + length + '\'' +
-                ", width='" + width + '\'' +
+                ", movieTitle='" + movieTitle + '\'' +
+                ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
                 ", price='" + price + '\'' +
                 '}';
     }
