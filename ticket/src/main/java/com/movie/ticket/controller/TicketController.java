@@ -31,7 +31,7 @@ public class TicketController {
 
 
     //This is a GET request that will read a list of all the ticket.
-    //http://localhost:8080/retrieveAllTicket
+    //http://localhost:8080/retrieveAllTickets
     @GetMapping("/retrieveAllTickets")
     public List<Ticket> findAll() {
         return ticketService.findAll();
