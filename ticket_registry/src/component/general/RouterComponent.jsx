@@ -14,7 +14,7 @@ class RouterComponent extends Component {
             <Router>
                 <HeaderComponent />
                     <Switch>
-                        <Route exact path="/"><WelcomeComponent name="Everett"/></Route>                       
+                        <Route exact path="/"><WelcomeComponent name="Joshua Saniyka, Gene Dula(Alex), and Joshua Shin"/></Route>
                         <Route path="/theTicket/:id" component={AddTicket} />
                         <Route path="/ticket/:id/:jobTitle" component={UpdateTicketComponent} />
                         <Route path="/TicketRegistry" exact component={TicketRegistryComponent} />

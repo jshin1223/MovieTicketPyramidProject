@@ -6,10 +6,10 @@ class AddTicket extends Component {
         super(props)
         this.state = {
             id: this.props.match.params.id,
-            jobTitle: '',
-            firstName: '',
-            lastName: '',
-            email: ''
+            movieTitle: '',
+            date: '',
+            time: '',
+            price: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -24,10 +24,10 @@ class AddTicket extends Component {
     handleSubmit() {
         let ticket = {
             id: this.state.id,
-            jobTitle: this.state.jobTitle,
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
-            email: this.state.email
+            movieTitle: this.state.movieTitle,
+            date: this.state.date,
+            time: this.state.time,
+            price: this.state.price
         }
         DataService.createTicket(ticket)
             .then(this.props.history.push(`/TicketRegistry`))
@@ -46,20 +46,20 @@ class AddTicket extends Component {
                             <input className="form-control" type="text" value={this.state.id} disabled/>
                         </div>
                         <div>
-                            <label>Job Title:</label>
-                            <input className="form-control" type="text" name="jobTitle" onChange={this.handleChange}/>
+                            <label>Movie Title:</label>
+                            <input className="form-control" type="text" name="movieTitle" onChange={this.handleChange}/>
                         </div>
                         <div>
-                            <label>First Name:</label>
-                            <input className="form-control" type="text" name="firstName" onChange={this.handleChange}/>
+                            <label>Date:</label>
+                            <input className="form-control" type="text" name="date" onChange={this.handleChange}/>
                         </div>       
                         <div>
-                            <label>Last Name:</label>
-                            <input className="form-control" type="text" name="lastName" onChange={this.handleChange}/>
+                            <label>Time:</label>
+                            <input className="form-control" type="text" name="time" onChange={this.handleChange}/>
                         </div>      
                         <div>
-                            <label>Email:</label>
-                            <input className="form-control" type="text" name="email" onChange={this.handleChange}/>
+                            <label>Price:</label>
+                            <input className="form-control" type="text" name="price" onChange={this.handleChange}/>
                         </div><br/><br/>
                         <button className="btn btn-success" type="submit">Submit</button><br/><br/>
                     </form><br/><br/>

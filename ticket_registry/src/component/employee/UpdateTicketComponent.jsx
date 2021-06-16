@@ -7,10 +7,10 @@ class UpdateTicketComponent extends Component {
         super(props)
         this.state = {
             id: this.props.match.params.id,
-            jobTitle: this.props.match.params.jobTitle,
-            firstName: '',
-            lastName: '',
-            email: ''
+            movieTitle: this.props.match.params.movieTitle,
+            date: '',
+            time: '',
+            price: ''
         }
         this.onSubmit = this.onSubmit.bind(this)
     }
@@ -18,17 +18,17 @@ class UpdateTicketComponent extends Component {
     onSubmit(values) {
         let ticket = {
             id: this.state.id,
-            jobTitle: values.jobTitle,
-            firstName: values.firstName,
-            lastName: values.lastName,
-            email: values.email
+            movieTitle: values.movieTitle,
+            date: values.date,
+            time: values.time,
+            price: values.price
         }
             TicketDataService.updateTicket(ticket)
             .then(() => this.props.history.push('/TicketRegistry'))
     }
 
     render() {
-        let {id, jobTitle, firstName, lastName, email} = this.state
+        let {id, movieTitle, date, time, price} = this.state
         return(
             <div>
                 <div className="jumbotron" style={{backgroundColor: "gray"}}>
@@ -36,7 +36,7 @@ class UpdateTicketComponent extends Component {
                 </div>
                 <div className="container">
                     <Formik
-                        initialValues={{id, jobTitle, firstName, lastName, email}}
+                        initialValues={{id, movieTitle, date, time, price}}
                         onSubmit={this.onSubmit}
                         enableReinitialize={true}
                     >
@@ -48,20 +48,20 @@ class UpdateTicketComponent extends Component {
                                         <Field className="form-control" type="text" name="id" disabled />
                                     </fieldset>
                                     <fieldset>
-                                        <label>Job Title</label>
-                                        <Field className="form-control" type="text" name="jobTitle" />
+                                        <label>Movie Title</label>
+                                        <Field className="form-control" type="text" name="movieTitle" />
                                     </fieldset>
                                     <fieldset>
-                                        <label>First Name</label>
-                                        <Field className="form-control" type="text" name="firstName" />
+                                        <label>Date</label>
+                                        <Field className="form-control" type="text" name="date" />
                                     </fieldset>
                                     <fieldset>
-                                        <label>Last Name</label>
-                                        <Field className="form-control" type="text" name="lastName" />
+                                        <label>Time</label>
+                                        <Field className="form-control" type="text" name="time" />
                                     </fieldset>
                                     <fieldset>
-                                        <label>Email</label>
-                                        <Field className="form-control" type="text" name="email" />
+                                        <label>Price</label>
+                                        <Field className="form-control" type="text" name="price" />
                                     </fieldset><br/>
                                     <button className="btn btn-success" type="submit">Save</button>
                                 </Form>
